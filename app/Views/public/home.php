@@ -190,6 +190,8 @@
       </div>
     </section>
 
+    <?= $this->include('public/partials/meeting_demo') ?>
+
     <section class="projects">
       <div class="project-band">
         <div class="project-left">
