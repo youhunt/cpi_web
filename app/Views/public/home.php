@@ -190,7 +190,48 @@
       </div>
     </section>
 
-    <?= $this->include('public/partials/meeting_demo') ?>
+    <section class="meeting-section soft domestic-network-section">
+      <div class="container">
+        <div class="meeting-head">
+          <div>
+            <div class="eyebrow">Domestic Network</div>
+            <h2 class="section-title">Indonesia Customer Support Network</h2>
+          </div>
+          <p class="section-copy">A clear domestic network section helps customers understand CPI office support, coverage areas, project references, and future distributor network across Indonesia.</p>
+        </div>
+
+        <div class="network-wrap">
+          <div class="map-panel">
+            <div class="map-title">
+              <h3>Office, Coverage Area & Project Locations</h3>
+              <p>Interactive map concept for Jakarta office, industrial area coverage, distributor network, and project references across Indonesia.</p>
+            </div>
+          </div>
+
+          <div class="network-list">
+            <article class="network-item">
+              <h3>Jakarta Office</h3>
+              <p>Corporate communication, product inquiry, customer relation, and administration support.</p>
+            </article>
+
+            <article class="network-item">
+              <h3>Industrial Area Coverage</h3>
+              <p>Support for manufacturing, infrastructure, marine, tank, pipe, and flooring coating applications.</p>
+            </article>
+
+            <article class="network-item">
+              <h3>Project References</h3>
+              <p>Showcase domestic project records to strengthen trust and customer understanding.</p>
+            </article>
+
+            <article class="network-item">
+              <h3>Distributor Network</h3>
+              <p>Future-ready section for searchable distributor or sales area network.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section class="projects">
       <div class="project-band">
@@ -211,24 +252,24 @@
               <article class="project-card">
                 <img src="<?= base_url('assets/images/cpi03.jpeg') ?>" alt="">
                 <div class="project-info">
-                  <h3>Akashi Kaikyo Bridge</h3>
-                  <p>Japan</p>
+                  <h3>Bridge Coating Application</h3>
+                  <p>Infrastructure</p>
                 </div>
               </article>
 
               <article class="project-card">
                 <img src="<?= base_url('assets/images/cpi02.jpg') ?>" alt="">
                 <div class="project-info">
-                  <h3>Offshore Platform</h3>
-                  <p>Malaysia</p>
+                  <h3>Marine Paint Application</h3>
+                  <p>Marine</p>
                 </div>
               </article>
 
               <article class="project-card">
                 <img src="<?= base_url('assets/images/cpi06.jpg') ?>" alt="">
                 <div class="project-info">
-                  <h3>Power Plant Project</h3>
-                  <p>Thailand</p>
+                  <h3>Tank Coating Project</h3>
+                  <p>Industrial</p>
                 </div>
               </article>
             </div>
