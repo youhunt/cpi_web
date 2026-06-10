@@ -35,3 +35,24 @@ function tx(string $id, string $en, ?string $lang = null): string
 
     return $lang === 'en' ? $en : $id;
 }
+
+function localized_field(?array $row, string $field, ?string $lang = null, string $fallback = ''): string
+{
+    if (empty($row)) {
+        return $fallback;
+    }
+
+    $lang = $lang ?: current_lang();
+    $key = $field . '_' . $lang;
+    $fallbackKey = $field . '_id';
+
+    if (isset($row[$key]) && trim((string) $row[$key]) !== '') {
+        return (string) $row[$key];
+    }
+
+    if (isset($row[$fallbackKey]) && trim((string) $row[$fallbackKey]) !== '') {
+        return (string) $row[$fallbackKey];
+    }
+
+    return $fallback;
+}
