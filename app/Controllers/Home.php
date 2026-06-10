@@ -48,6 +48,15 @@ class Home extends BaseController
         ]);
     }
 
+    public function meetingDemo()
+    {
+        return view('public/pages/meeting-demo', [
+            'lang' => 'en',
+            'title' => 'Meeting Demo - CPI New Website Platform Concept',
+            'metaDescription' => 'Meeting material for CPI new website platform concept: security, bilingual communication, product visuals, project records, domestic network map, and value-added ideas.',
+        ]);
+    }
+
     private function normalizeLang(string $lang): string
     {
         return in_array($lang, $this->allowedLang, true) ? $lang : 'id';
