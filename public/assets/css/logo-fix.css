@@ -1,0 +1,87 @@
+/* Logo clarity improvement for CPI header and footer.
+   This file only adjusts logo sizing/presentation, not the logo artwork. */
+
+.site-header {
+  height: 96px;
+}
+
+.nav {
+  gap: 22px;
+}
+
+.logo {
+  min-width: 390px;
+  flex: 0 0 390px;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 68px !important;
+  width: auto !important;
+  max-width: 390px !important;
+  object-fit: contain;
+  image-rendering: auto;
+}
+
+.menu {
+  gap: 22px;
+}
+
+.footer .logo {
+  min-width: 420px;
+  flex: 0 0 auto;
+  margin-bottom: 22px;
+}
+
+.footer .logo img {
+  height: 72px !important;
+  width: auto !important;
+  max-width: 420px !important;
+  object-fit: contain;
+  background: transparent !important;
+}
+
+@media (max-width: 1180px) {
+  .site-header {
+    height: 88px;
+  }
+
+  .logo {
+    min-width: 310px;
+    flex-basis: 310px;
+  }
+
+  .logo img {
+    height: 58px !important;
+    max-width: 310px !important;
+  }
+}
+
+@media (max-width: 1050px) {
+  .logo {
+    min-width: auto;
+    flex: 0 1 auto;
+  }
+
+  .logo img {
+    height: 52px !important;
+    max-width: 280px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .site-header {
+    height: auto;
+  }
+
+  .logo img {
+    height: 44px !important;
+    max-width: 220px !important;
+  }
+
+  .footer .logo img {
+    height: 52px !important;
+    max-width: 280px !important;
+  }
+}
