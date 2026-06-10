@@ -6,6 +6,7 @@ use CodeIgniter\Router\RouteCollection;
  * @var RouteCollection $routes
  */
 $routes->get('/', 'Home::redirectDefault');
+$routes->get('meeting-demo', 'Home::meetingDemo');
 
 $routes->group('(:segment)', static function ($routes) {
     $routes->get('/', 'Home::index/$1');
