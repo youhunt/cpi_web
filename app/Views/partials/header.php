@@ -8,13 +8,12 @@
     </a>
 
     <nav class="menu">
-      <a href="<?= base_url('about') ?>">About Us</a>
-      <a href="<?= base_url('products') ?>">Products</a>
-      <a href="<?= base_url('solutions') ?>">Solutions</a>
-      <a href="<?= base_url('projects') ?>">Projects</a>
-      <a href="<?= base_url('sustainability') ?>">Sustainability</a>
-      <a href="<?= base_url('news') ?>">News</a>
-      <a href="<?= base_url('contact') ?>">Contact</a>
+      <a href="<?= base_url(current_lang() . '/about') ?>">About Us</a>
+      <a href="<?= base_url(current_lang() . '/products') ?>">Products</a>
+      <a href="<?= base_url(current_lang() . '/solutions') ?>">Solutions</a>
+      <a href="<?= base_url(current_lang() . '/projects') ?>">Projects</a>
+      <a href="<?= base_url(current_lang() . '/sustainability') ?>">Sustainability</a>
+      <a href="<?= base_url(current_lang() . '/news') ?>">News</a>
     </nav>
 
     <div class="nav-actions">

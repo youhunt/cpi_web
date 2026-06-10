@@ -8,6 +8,8 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/', 'Home::redirectDefault');
 $routes->get('meeting-demo', 'Home::meetingDemo');
 
+service('auth')->routes($routes);
+
 $routes->group('(:segment)', static function ($routes) {
     $routes->get('/', 'Home::index/$1');
     $routes->get('about', 'Home::page/$1/about');
