@@ -1,7 +1,10 @@
 <header class="site-header">
     <div class="container nav">
       <a href="<?= base_url('/') ?>" class="logo" aria-label="Chugoku Paints">
-        <img src="<?= base_url('assets/images/logo.png') ?>" alt="Chugoku Paints Indonesia">
+        <picture>
+          <source media="(max-width: 640px)" srcset="<?= base_url('assets/images/logo_small.png') ?>">
+          <img src="<?= base_url('assets/images/logo.png') ?>" alt="Chugoku Paints Indonesia">
+        </picture>
       </a>
 
       <nav class="menu">
