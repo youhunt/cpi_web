@@ -1,25 +1,36 @@
 <header class="site-header">
-    <div class="container nav">
-      <a href="<?= base_url('/') ?>" class="logo" aria-label="Chugoku Paints">
-        <picture>
-          <source media="(max-width: 640px)" srcset="<?= base_url('assets/images/logo_small.png') ?>">
-          <img src="<?= base_url('assets/images/logo.png') ?>" alt="Chugoku Paints Indonesia">
-        </picture>
+  <div class="container nav">
+    <a href="<?= base_url('/') ?>" class="logo" aria-label="Chugoku Paints">
+      <picture>
+        <source media="(max-width: 640px)" srcset="<?= base_url('assets/images/logo_small.png') ?>">
+        <img src="<?= base_url('assets/images/logo.png') ?>" alt="Chugoku Paints Indonesia">
+      </picture>
+    </a>
+
+    <nav class="menu">
+      <a href="<?= base_url('about') ?>">About Us</a>
+      <a href="<?= base_url('products') ?>">Products</a>
+      <a href="<?= base_url('solutions') ?>">Solutions</a>
+      <a href="<?= base_url('projects') ?>">Projects</a>
+      <a href="<?= base_url('sustainability') ?>">Sustainability</a>
+      <a href="<?= base_url('news') ?>">News</a>
+      <a href="<?= base_url('contact') ?>">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="<?= lang_url('id') ?>" class="<?= current_lang() === 'id' ? 'active-lang' : '' ?>">
+        ID
       </a>
 
-      <nav class="menu">
-        <a href="<?= base_url('about') ?>">About Us</a>
-        <a href="<?= base_url('products') ?>">Products</a>
-        <a href="<?= base_url('solutions') ?>">Solutions</a>
-        <a href="<?= base_url('projects') ?>">Projects</a>
-        <a href="<?= base_url('sustainability') ?>">Sustainability</a>
-        <a href="<?= base_url('news') ?>">News</a>
-        <a href="<?= base_url('contact') ?>">Contact</a>
-      </nav>
+      <span>/</span>
 
-      <div class="nav-actions">
-        <span>EN⌄</span>
-        <a href="<?= base_url('contact') ?>" class="btn-dark">Contact Us</a>
-      </div>
+      <a href="<?= lang_url('en') ?>" class="<?= current_lang() === 'en' ? 'active-lang' : '' ?>">
+        EN
+      </a>
+
+      <a href="<?= base_url(current_lang() . '/contact') ?>" class="btn-dark">
+        Contact Us
+      </a>
     </div>
-  </header>
+  </div>
+</header>
