@@ -1,0 +1,246 @@
+/* Meeting demo sections: bilingual communication, domestic network map, security/value platform */
+
+.meeting-section {
+  padding: 84px 0;
+  background: #fff;
+}
+
+.meeting-section.soft {
+  background: linear-gradient(180deg, #f6f9fd 0%, #fff 100%);
+}
+
+.meeting-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 34px;
+  margin-bottom: 36px;
+}
+
+.meeting-head .section-copy {
+  max-width: 560px;
+  margin-bottom: 0;
+}
+
+.pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #d9e4f2;
+  background: #fff;
+  color: #0b2348;
+  border-radius: 999px;
+  padding: 9px 14px;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.pill.blue {
+  background: #005bd8;
+  color: #fff;
+  border-color: #005bd8;
+}
+
+.lang-preview-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+.lang-card {
+  border: 1px solid #e3eaf4;
+  background: #fff;
+  border-radius: 12px;
+  padding: 28px;
+  box-shadow: 0 18px 42px rgba(11, 35, 72, .07);
+}
+
+.lang-card .lang-label {
+  color: #005bd8;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .8px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.lang-card h3 {
+  font-size: 26px;
+  line-height: 1.22;
+  margin-bottom: 14px;
+}
+
+.lang-card p {
+  color: #53657f;
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.platform-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+.platform-card {
+  background: #fff;
+  border: 1px solid #e2eaf5;
+  border-radius: 12px;
+  padding: 24px 20px;
+  min-height: 190px;
+  box-shadow: 0 14px 34px rgba(11, 35, 72, .06);
+}
+
+.platform-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: #edf5ff;
+  color: #005bd8;
+  font-size: 22px;
+  margin-bottom: 16px;
+}
+
+.platform-card h3 {
+  font-size: 17px;
+  line-height: 1.28;
+  margin-bottom: 10px;
+}
+
+.platform-card p {
+  color: #65738a;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.network-wrap {
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: 28px;
+  align-items: stretch;
+}
+
+.map-panel {
+  position: relative;
+  min-height: 420px;
+  border-radius: 16px;
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, rgba(0, 31, 77, .94), rgba(0, 91, 216, .78)),
+    radial-gradient(circle at 65% 40%, rgba(255,255,255,.24), transparent 28%);
+  box-shadow: 0 24px 54px rgba(0, 31, 77, .16);
+}
+
+.map-panel:before {
+  content: "";
+  position: absolute;
+  inset: 34px;
+  opacity: .9;
+  background:
+    radial-gradient(circle at 24% 64%, #fff 0 5px, transparent 6px),
+    radial-gradient(circle at 38% 55%, #fff 0 5px, transparent 6px),
+    radial-gradient(circle at 46% 50%, #fff 0 5px, transparent 6px),
+    radial-gradient(circle at 54% 47%, #fff 0 5px, transparent 6px),
+    radial-gradient(circle at 64% 43%, #fff 0 5px, transparent 6px),
+    radial-gradient(circle at 72% 40%, #fff 0 5px, transparent 6px),
+    linear-gradient(22deg, transparent 45%, rgba(255,255,255,.28) 46%, rgba(255,255,255,.28) 47%, transparent 48%);
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 14px;
+}
+
+.map-title {
+  position: absolute;
+  left: 34px;
+  right: 34px;
+  bottom: 30px;
+  z-index: 2;
+  color: #fff;
+}
+
+.map-title h3 {
+  font-size: 28px;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.map-title p {
+  color: #dbe8f8;
+  max-width: 520px;
+}
+
+.network-list {
+  display: grid;
+  gap: 14px;
+}
+
+.network-item {
+  border: 1px solid #e3eaf4;
+  border-radius: 12px;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 14px 32px rgba(11, 35, 72, .05);
+}
+
+.network-item h3 {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.network-item p {
+  color: #5e6d83;
+  font-size: 14px;
+}
+
+.demo-note {
+  margin-top: 26px;
+  padding: 18px 20px;
+  border-left: 4px solid #005bd8;
+  background: #f2f7ff;
+  color: #31445f;
+  border-radius: 10px;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+@media(max-width: 1050px) {
+  .platform-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .network-wrap,
+  .lang-preview-grid,
+  .meeting-head {
+    grid-template-columns: 1fr;
+    display: grid;
+  }
+}
+
+@media(max-width: 640px) {
+  .meeting-section {
+    padding: 58px 0;
+  }
+
+  .platform-grid,
+  .lang-preview-grid,
+  .network-wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .map-panel {
+    min-height: 340px;
+  }
+
+  .lang-card h3,
+  .map-title h3 {
+    font-size: 23px;
+  }
+}

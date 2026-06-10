@@ -12,6 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="<?= base_url('assets/css/chugoku.css') ?>">
   <link rel="stylesheet" href="<?= base_url('assets/css/logo-fix.css') ?>">
+  <link rel="stylesheet" href="<?= base_url('assets/css/meeting-demo.css') ?>">
 </head>
 <body>
 <?= $this->include('partials/floating_social') ?>
