@@ -2,6 +2,13 @@
 
 namespace App\Controllers;
 
+use App\Models\NewsModel;
+use App\Models\PageModel;
+use App\Models\ProductModel;
+use App\Models\ProjectModel;
+use App\Models\SiteSectionModel;
+use App\Models\NetworkLocationModel;
+
 class Home extends BaseController
 {
     protected array $allowedLang = ['id', 'en'];
@@ -15,11 +22,20 @@ class Home extends BaseController
     {
         $lang = $this->normalizeLang($lang);
 
+        $sectionModel = new SiteSectionModel();
+        $productModel = new ProductModel();
+        $projectModel = new ProjectModel();
+        $newsModel = new NewsModel();
+        $networkModel = new NetworkLocationModel();
+
         return view('public/home', [
             'lang' => $lang,
-            'title' => $lang === 'id'
-                ? 'Chugoku Paints Indonesia'
-                : 'Chugoku Paints Indonesia',
+            'title' => 'Chugoku Paints Indonesia',
+            'sections' => $sectionModel->activeByGroup('home'),
+            'featuredProducts' => $productModel->publishedFeatured(6),
+            'featuredProjects' => $projectModel->publishedFeatured(6),
+            'latestNews' => $newsModel->latestPublished(3),
+            'networkLocations' => $networkModel->activeAll(),
         ]);
     }
 
@@ -41,20 +57,25 @@ class Home extends BaseController
             throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
         }
 
-        return view('public/pages/' . $page, [
+        $pageModel = new PageModel();
+        $pageData = $pageModel->findPublishedBySlug($page);
+
+        if (! $pageData) {
+            throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
+        }
+
+        return view('public/pages/dynamic', [
             'lang' => $lang,
             'page' => $page,
-            'title' => ucfirst($page) . ' - Chugoku Paints Indonesia',
+            'pageData' => $pageData,
+            'title' => localized_field($pageData, 'meta_title', $lang, localized_field($pageData, 'title', $lang)) . ' - Chugoku Paints Indonesia',
+            'metaDescription' => localized_field($pageData, 'meta_description', $lang, localized_field($pageData, 'excerpt', $lang)),
         ]);
     }
 
     public function meetingDemo()
     {
-        return view('public/pages/meeting-demo', [
-            'lang' => 'en',
-            'title' => 'Meeting Demo - CPI New Website Platform Concept',
-            'metaDescription' => 'Meeting material for CPI new website platform concept: security, bilingual communication, product visuals, project records, domestic network map, and value-added ideas.',
-        ]);
+        return redirect()->to(base_url('id'));
     }
 
     private function normalizeLang(string $lang): string
